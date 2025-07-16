@@ -6,7 +6,6 @@ import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import org.conradlco.games.snake.model.Direction;
@@ -16,10 +15,10 @@ import org.conradlco.games.snake.model.FruitType;
 public class SnakePanel extends JPanel implements KeyListener {
 
   private static final int BORDER_THICKNESS = 20;
-  private static final int BOARD_WIDTH = 50;
-  private static final int BOARD_HEIGHT = 50;
-  private static final int CELL_SIZE = 10;
-  private static final int TICKS_PER_FRUIT = 10;
+  private static final int BOARD_WIDTH = 40;
+  private static final int BOARD_HEIGHT = 40;
+  private static final int CELL_SIZE = 15;
+  private static final int TICKS_PER_FRUIT = 15;
 
   // Initial length of the snake
   private Direction currentDirection = Direction.RIGHT;
@@ -139,7 +138,7 @@ public class SnakePanel extends JPanel implements KeyListener {
     // Draw the score
     g.setColor(java.awt.Color.BLACK);
     g.setFont(new java.awt.Font("Arial", java.awt.Font.BOLD, 16));
-    g.drawString("Score: " + score, BOARD_WIDTH*CELL_SIZE + 50, 30);
+    g.drawString("Score: " + score, BOARD_WIDTH * CELL_SIZE + 50, 40);
   }
 
   @Override
